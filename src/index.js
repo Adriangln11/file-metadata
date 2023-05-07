@@ -9,7 +9,7 @@ app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.get('/api/hello', (req,res) => {
-    return res.json({greeting: 'Hello World!'})
+    return res.json({greeting: 'Hello API!'})
 })
 app.post('/api/sendFile',upload.single('formFile'), (req,res) => {
     const { originalname, mimetype, size } = req.file
